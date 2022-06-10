@@ -51,7 +51,7 @@ public class TasksController {
 //			restTemplate.postForObject(
 //					getBackendURL() + "/tasks-backend/todo", todo, Object.class);
 			restTemplate.postForObject(
-					"http://localhost:8001/tasks-backend/", todo, Object.class);
+					"http://localhost:8001/tasks-backend/todo", todo, Object.class);
 			model.addAttribute("success", "Success!");
 			return "index";
 		} catch(Exception e) {
@@ -82,6 +82,6 @@ public class TasksController {
 //		return restTemplate.getForObject(
 //				getBackendURL() + "/tasks-backend/todo", List.class);
 		return restTemplate.getForObject(
-				"http://localhost:8001/tasks-backend/", List.class);
+				"http://localhost:8001/tasks-backend/todo", List.class);
 	}
 }
